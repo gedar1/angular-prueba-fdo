@@ -1,0 +1,17 @@
+<div *ngIf="deletedHero; else noHero">
+
+  <h3>Heroe borrado {{ deletedHero }}</h3>
+
+</div>
+<ng-template #noHero>
+  <h3> no he borrado Heroe </h3>
+</ng-template>
+
+<button (click)="removeHero()" class="btn btn-danger mx-2">remove Hero</button>
+<button (click)="addHero()" class="btn btn-primary mx-2">Add Hero</button>
+<ul class="list-group mt-2">
+  <li *ngFor="let item of heroesNames" class="list-group-item" >
+    {{ item }}
+  </li>
+
+</ul>
